@@ -54,11 +54,11 @@ function Header() {
         <Flex className="flex justify-between">
           <div className="flex items-center">
           <Dropdown
-            className="relative"
+            className="relative z-50"
             /*onClick={handelDropdown}*/ dropref={categoryRef}
           >
             <p className="flex items-center gap-x-2.5 font-dm font-regular text-sm">
-              <RiBarChartHorizontalLine /> Shop by Category
+              <RiBarChartHorizontalLine /> <span className="hidden lg:inline-block">Shop by Category</span>
             </p>
             {categoryDropDownShow && (
               <List className="absolute font-dm font-regular text-sm top-8 w-[263px] bg-primary text-[#767676]  ">
@@ -90,13 +90,13 @@ function Header() {
             )}
           </Dropdown >
           </div>
-          <div className="w-[601px] relative">
+          <div className="lg:w-[601px] w-auto relative">
             <Search className="w-full font-dm font-regular text-sm py-4 px-5 placeholder:text-[#C4C4C4]" placeholder="Search Products " />
             <FaSearch className="absolute top-4 right-4 duration-100 ease-in-out" />
           </div>
           <div className="flex items-center">
             <Flex className="flex gap-x-10">
-              <Dropdown className="relative" dropref={userRef}>
+              <Dropdown className="relative z-50" dropref={userRef}>
               <div className="flex items-center">
               <FaUser/>
               <RxTriangleDown/>
@@ -117,7 +117,7 @@ function Header() {
               </Dropdown>
               
               <div className="">
-                <Dropdown className="relative " dropref={cartRef}>
+                <Dropdown className="relative z-50" dropref={cartRef}>
                 <FaShoppingCart className="text-xl"/>
               
               {cartDropDownShow && (
