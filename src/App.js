@@ -11,9 +11,10 @@ import Home from "./pages/Home";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
-  <Route path="/" element={<RootLayout />}>
-    <Route index element={<Home/>}></Route>
-  </Route>)
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />}></Route>
+    </Route>
+  )
 );
 
 function App() {
